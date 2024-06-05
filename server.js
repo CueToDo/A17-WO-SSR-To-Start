@@ -8,16 +8,12 @@ function requireHTTPS(req, res, next) {
 
 const express = require('express');
 const path = require('path');
+const port = process.env.PORT || 8080;
 
 const app = express();
 
-// app.use(express.static(__dirname + '/dist/a17-soc'));
+app.use('/', express.static(__dirname + '/dist/a17-soc'));
 
-app.use(requireHTTPS());
-
-
-app.get('/*', function(req,res) {
-    res.sendFile(path.join(__dirname + '/dist/a17-soc/index.html'));
+app.listen(port,()=>{
+    console.log('app started and listening on port:', port)
 });
-
-app.listen(process.env.PORT || 8080);
