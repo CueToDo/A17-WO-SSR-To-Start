@@ -8,7 +8,7 @@
     "test": "ng test",
     "start": "ng serve",
     "start:heroku": "node dist/a17-soc/server/main.js",
-    "heroku-postbuild": "ng build — prod"
+    "heroku-postbuild": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {
