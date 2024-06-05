@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Serve static files from the dist folder
-app.use(express.static(__dirname + '/dist/a17-soc'));
+app.use(express.static(__dirname + '/dist/a17-soc/browser'));
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
 
