@@ -7,7 +7,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start": "ng serve",
-    "start:heroku": "node dist/a17-soc/browser/index.html",
+    "start:heroku": "node server.js",
     "heroku-postbuild": "ng build --configuration production"
   },
   "private": true,
